@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="993c8c94-62ca-47aa-80ed-5e6c897e9d5a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgDat-Oblig2/DobbeltLenketListe$DobbeltLenketListeIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgDat-Oblig2/DobbeltLenketListe$DobbeltLenketListeIterator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgDat-Oblig2/DobbeltLenketListe$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgDat-Oblig2/DobbeltLenketListe$Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgDat-Oblig2/DobbeltLenketListe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgDat-Oblig2/DobbeltLenketListe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgDat-Oblig2/Oblig2Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgDat-Oblig2/Oblig2Test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DobbeltLenketListe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DobbeltLenketListe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Oblig2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Oblig2Test.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,43 +20,35 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.7068884">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="DobbeltLenketListe.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="DobbeltLenketListe.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/DobbeltLenketListe.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="514">
-                  <caret line="118" column="9" lean-forward="true" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
+                <state relative-caret-position="490">
+                  <caret line="117" column="48" selection-start-line="117" selection-start-column="48" selection-end-line="117" selection-end-column="48" />
                   <folding>
-                    <element signature="e#905#906#0" expanded="true" />
-                    <element signature="e#980#981#0" expanded="true" />
-                    <element signature="e#3281#3282#0" expanded="true" />
-                    <element signature="e#3356#3357#0" expanded="true" />
-                    <element signature="e#3401#3402#0" expanded="true" />
-                    <element signature="e#3430#3431#0" expanded="true" />
-                    <element signature="e#3476#3477#0" expanded="true" />
-                    <element signature="e#3510#3511#0" expanded="true" />
-                    <element signature="e#3708#3709#0" expanded="true" />
-                    <element signature="e#3783#3784#0" expanded="true" />
-                    <element signature="e#3843#3844#0" expanded="true" />
-                    <element signature="e#3918#3919#0" expanded="true" />
-                    <element signature="e#3969#3970#0" expanded="true" />
-                    <element signature="e#4044#4045#0" expanded="true" />
-                    <element signature="e#4099#4100#0" expanded="true" />
-                    <element signature="e#4174#4175#0" expanded="true" />
-                    <element signature="e#4240#4241#0" expanded="true" />
-                    <element signature="e#4315#4316#0" expanded="true" />
-                    <element signature="e#4370#4371#0" expanded="true" />
-                    <element signature="e#4445#4446#0" expanded="true" />
-                    <element signature="e#4497#4498#0" expanded="true" />
-                    <element signature="e#4572#4573#0" expanded="true" />
-                    <element signature="e#4621#4622#0" expanded="true" />
-                    <element signature="e#4696#4697#0" expanded="true" />
-                    <element signature="e#5149#5150#0" expanded="true" />
-                    <element signature="e#5224#5225#0" expanded="true" />
-                    <element signature="e#5275#5276#0" expanded="true" />
-                    <element signature="e#5350#5351#0" expanded="true" />
+                    <element signature="e#3774#3775#0" expanded="true" />
+                    <element signature="e#3803#3804#0" expanded="true" />
+                    <element signature="e#3849#3850#0" expanded="true" />
+                    <element signature="e#3883#3884#0" expanded="true" />
+                    <element signature="e#4294#4295#0" expanded="true" />
+                    <element signature="e#4369#4370#0" expanded="true" />
+                    <element signature="e#4429#4430#0" expanded="true" />
+                    <element signature="e#4504#4505#0" expanded="true" />
+                    <element signature="e#4690#4691#0" expanded="true" />
+                    <element signature="e#4765#4766#0" expanded="true" />
+                    <element signature="e#5142#5143#0" expanded="true" />
+                    <element signature="e#5217#5218#0" expanded="true" />
+                    <element signature="e#5269#5270#0" expanded="true" />
+                    <element signature="e#5344#5345#0" expanded="true" />
+                    <element signature="e#5393#5394#0" expanded="true" />
+                    <element signature="e#5468#5469#0" expanded="true" />
+                    <element signature="e#6665#6666#0" expanded="true" />
+                    <element signature="e#6740#6741#0" expanded="true" />
+                    <element signature="e#6791#6792#0" expanded="true" />
+                    <element signature="e#6866#6867#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -65,11 +63,20 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Liste.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Liste.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="44">
+                  <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="246">
-                  <caret line="15" column="46" lean-forward="true" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+                <state relative-caret-position="642">
+                  <caret line="58" column="38" lean-forward="true" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
                 </state>
               </provider>
             </entry>
@@ -77,8 +84,8 @@
           <file leaf-file-name="Oblig2Test.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Oblig2Test.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2840">
-                  <caret line="153" column="37" lean-forward="true" selection-start-line="153" selection-start-column="37" selection-end-line="153" selection-end-column="37" />
+                <state relative-caret-position="2328">
+                  <caret line="530" column="10" selection-start-line="530" selection-start-column="10" selection-end-line="530" selection-end-column="10" />
                   <folding>
                     <element signature="e#0#43491#0" expanded="true" />
                     <element signature="e#4972#4973#0" expanded="true" />
@@ -95,7 +102,7 @@
           <file leaf-file-name="EnkeltLenketListe.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/EnkeltLenketListe.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="5060">
+                <state relative-caret-position="2683">
                   <caret line="286" column="20" lean-forward="true" selection-start-line="286" selection-start-column="20" selection-end-line="286" selection-end-column="20" />
                 </state>
               </provider>
@@ -132,8 +139,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="870" />
-    <option name="width" value="2577" />
+    <option name="x" value="1326" />
+    <option name="width" value="2121" />
     <option name="height" value="1407" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -188,7 +195,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Oblig2Test">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="DobbeltLenketListe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DobbeltLenketListe" />
       <module name="AlgDat-Oblig2" />
@@ -252,8 +259,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Oblig2Test" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Oblig2Test" />
         <item itemvalue="Application.DobbeltLenketListe" />
       </list>
     </recent_temporary>
@@ -272,7 +279,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="870" y="0" width="2577" height="1407" extended-state="0" />
+    <frame x="1326" y="0" width="2121" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -308,7 +315,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="15" />
+      <option name="time" value="16" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -317,34 +324,26 @@
         <state relative-caret-position="1232">
           <caret line="59" column="31" lean-forward="true" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
           <folding>
-            <element signature="e#905#906#0" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
-            <element signature="e#3281#3282#0" expanded="true" />
-            <element signature="e#3356#3357#0" expanded="true" />
-            <element signature="e#3401#3402#0" expanded="true" />
-            <element signature="e#3430#3431#0" expanded="true" />
-            <element signature="e#3476#3477#0" expanded="true" />
-            <element signature="e#3510#3511#0" expanded="true" />
-            <element signature="e#3708#3709#0" expanded="true" />
-            <element signature="e#3783#3784#0" expanded="true" />
-            <element signature="e#3843#3844#0" expanded="true" />
-            <element signature="e#3918#3919#0" expanded="true" />
-            <element signature="e#3969#3970#0" expanded="true" />
-            <element signature="e#4044#4045#0" expanded="true" />
-            <element signature="e#4099#4100#0" expanded="true" />
-            <element signature="e#4174#4175#0" expanded="true" />
-            <element signature="e#4240#4241#0" expanded="true" />
-            <element signature="e#4315#4316#0" expanded="true" />
-            <element signature="e#4370#4371#0" expanded="true" />
-            <element signature="e#4445#4446#0" expanded="true" />
-            <element signature="e#4497#4498#0" expanded="true" />
-            <element signature="e#4572#4573#0" expanded="true" />
-            <element signature="e#4621#4622#0" expanded="true" />
-            <element signature="e#4696#4697#0" expanded="true" />
-            <element signature="e#5149#5150#0" expanded="true" />
-            <element signature="e#5224#5225#0" expanded="true" />
-            <element signature="e#5275#5276#0" expanded="true" />
-            <element signature="e#5350#5351#0" expanded="true" />
+            <element signature="e#3774#3775#0" expanded="true" />
+            <element signature="e#3803#3804#0" expanded="true" />
+            <element signature="e#3849#3850#0" expanded="true" />
+            <element signature="e#3883#3884#0" expanded="true" />
+            <element signature="e#4294#4295#0" expanded="true" />
+            <element signature="e#4369#4370#0" expanded="true" />
+            <element signature="e#4429#4430#0" expanded="true" />
+            <element signature="e#4504#4505#0" expanded="true" />
+            <element signature="e#4690#4691#0" expanded="true" />
+            <element signature="e#4765#4766#0" expanded="true" />
+            <element signature="e#5142#5143#0" expanded="true" />
+            <element signature="e#5217#5218#0" expanded="true" />
+            <element signature="e#5269#5270#0" expanded="true" />
+            <element signature="e#5344#5345#0" expanded="true" />
+            <element signature="e#5393#5394#0" expanded="true" />
+            <element signature="e#5468#5469#0" expanded="true" />
+            <element signature="e#6665#6666#0" expanded="true" />
+            <element signature="e#6740#6741#0" expanded="true" />
+            <element signature="e#6791#6792#0" expanded="true" />
+            <element signature="e#6866#6867#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -385,13 +384,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Liste.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="52" lean-forward="true" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lesmeg.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -411,8 +403,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Oblig2Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2840">
-          <caret line="153" column="37" lean-forward="true" selection-start-line="153" selection-start-column="37" selection-end-line="153" selection-end-column="37" />
+        <state relative-caret-position="2328">
+          <caret line="530" column="10" selection-start-line="530" selection-start-column="10" selection-end-line="530" selection-end-column="10" />
           <folding>
             <element signature="e#0#43491#0" expanded="true" />
             <element signature="e#4972#4973#0" expanded="true" />
@@ -421,47 +413,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/Liste.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="15" column="46" lean-forward="true" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+        <state relative-caret-position="44">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DobbeltLenketListe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="118" column="9" lean-forward="true" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
+        <state relative-caret-position="490">
+          <caret line="117" column="48" selection-start-line="117" selection-start-column="48" selection-end-line="117" selection-end-column="48" />
           <folding>
-            <element signature="e#905#906#0" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
-            <element signature="e#3281#3282#0" expanded="true" />
-            <element signature="e#3356#3357#0" expanded="true" />
-            <element signature="e#3401#3402#0" expanded="true" />
-            <element signature="e#3430#3431#0" expanded="true" />
-            <element signature="e#3476#3477#0" expanded="true" />
-            <element signature="e#3510#3511#0" expanded="true" />
-            <element signature="e#3708#3709#0" expanded="true" />
-            <element signature="e#3783#3784#0" expanded="true" />
-            <element signature="e#3843#3844#0" expanded="true" />
-            <element signature="e#3918#3919#0" expanded="true" />
-            <element signature="e#3969#3970#0" expanded="true" />
-            <element signature="e#4044#4045#0" expanded="true" />
-            <element signature="e#4099#4100#0" expanded="true" />
-            <element signature="e#4174#4175#0" expanded="true" />
-            <element signature="e#4240#4241#0" expanded="true" />
-            <element signature="e#4315#4316#0" expanded="true" />
-            <element signature="e#4370#4371#0" expanded="true" />
-            <element signature="e#4445#4446#0" expanded="true" />
-            <element signature="e#4497#4498#0" expanded="true" />
-            <element signature="e#4572#4573#0" expanded="true" />
-            <element signature="e#4621#4622#0" expanded="true" />
-            <element signature="e#4696#4697#0" expanded="true" />
-            <element signature="e#5149#5150#0" expanded="true" />
-            <element signature="e#5224#5225#0" expanded="true" />
-            <element signature="e#5275#5276#0" expanded="true" />
-            <element signature="e#5350#5351#0" expanded="true" />
+            <element signature="e#3774#3775#0" expanded="true" />
+            <element signature="e#3803#3804#0" expanded="true" />
+            <element signature="e#3849#3850#0" expanded="true" />
+            <element signature="e#3883#3884#0" expanded="true" />
+            <element signature="e#4294#4295#0" expanded="true" />
+            <element signature="e#4369#4370#0" expanded="true" />
+            <element signature="e#4429#4430#0" expanded="true" />
+            <element signature="e#4504#4505#0" expanded="true" />
+            <element signature="e#4690#4691#0" expanded="true" />
+            <element signature="e#4765#4766#0" expanded="true" />
+            <element signature="e#5142#5143#0" expanded="true" />
+            <element signature="e#5217#5218#0" expanded="true" />
+            <element signature="e#5269#5270#0" expanded="true" />
+            <element signature="e#5344#5345#0" expanded="true" />
+            <element signature="e#5393#5394#0" expanded="true" />
+            <element signature="e#5468#5469#0" expanded="true" />
+            <element signature="e#6665#6666#0" expanded="true" />
+            <element signature="e#6740#6741#0" expanded="true" />
+            <element signature="e#6791#6792#0" expanded="true" />
+            <element signature="e#6866#6867#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="58" column="38" lean-forward="true" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
         </state>
       </provider>
     </entry>
