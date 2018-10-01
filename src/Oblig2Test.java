@@ -1,6 +1,3 @@
-package no.oslomet.cs.algdat.Oblig2;
-
-
 ////// Testprogram for Oblig 2 - 2018 ////////////////////////
 
 /*
@@ -41,7 +38,7 @@ public class Oblig2Test {
                             + antallFeil + " feil eller svakhet(er)!");
         }
     }
-
+    /*
     ////// Oppgave 1 /////////////////////
 
     public static int oppgave1() {
@@ -1350,5 +1347,5 @@ public class Oblig2Test {
 
         return antallFeil;
     }
-
+    */
 } // Oblig2Test
