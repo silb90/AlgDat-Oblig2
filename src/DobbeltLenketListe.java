@@ -45,56 +45,37 @@ public class DobbeltLenketListe<T> implements Liste<T>
     // konstruktør
     public DobbeltLenketListe(T[] a)
     {
+        // Setter verdiene via konstruktoeren over
         this();
 
         //Sjekker om a eksisterer.
         Objects.requireNonNull(a, "Ikkje Lov! AKA  Tabellen a er null!");
 
-
+        // Sjekker om a har objekter / har innhold
         if (a.length == 0) return;
 
-        // Vil legge indeksene til alle som er ulike null fra a inn i ny tabell
-        // Samtidig legge 1 til antall for hver gang man finner et objekt ulik null
+        // Vil samle inn indeksene til alle elementene i a som ikke er nullpointere
+        // Samtidig legge 1 til antallet for hver gang man ikke har en nullpointer
         ArrayList<Integer> index = new ArrayList<>();
-        for (int i = 0; i < a.length - 1; i++) {
+        for (int i = 0; i < a.length; i++) {
             if (a[i] != null) {
                 index.add(i);
                 antall++;
             }
         }
 
+        // Hvis det kun finnes nullpointer objekter, returner
         if (antall == 0) return;
 
-        if (antall == 1) {
-            hode = hale = new Node<>(a[index.get(0)], null, null);
-        } else if (antall < 3) {
-            hode = new Node<>(a[index.get(0)], hale, null);
-            hale = new Node<>(a[index.get(1)], null, hale);
-        } else {
-            hode = new Node<>(a[index.get(0)], hale, null);
-            hale = new Node<>(a[index.get(index.size()-1)], null, hale);
+        // Videre lages en Node for hode og hale
+        hode = hale = new Node<>(a[index.get(index.size() - 1)], null, null);
 
-            for (int i = index.size() - 2; i >= 1; i--) {
-
-            }
+        // Vil saa iterere gjennom og lage et nyte hode for hver gang, som samtidig peker til neste og forrige
+        for (int i = index.size() - 2; i >= 0; i--) {
+            Node<T> tmp = hode;
+            hode = new Node<>(a[index.get(i)], null, tmp);
+            tmp.forrige = hode;
         }
-
-//        if (a[a.length - 1] != null) {
-//            hode = hale = new Node<>(a[a.length-1], null, null);
-//            antall++;
-//        }
-//
-//        for (int i = a.length - 2; i >= 0; i--) {
-//            if (a[i] != null) {
-//                hode = new Node<>(a[i], hale, hode);
-//                hale = new Node<>(a[i], hode, hale);
-//                antall++;
-//            }
-//        }
-
-
-
-        //Sjekker om a inneholder en eller flere null-verdier
 
         //LinkedList<String> liste = new LinkedList<>();
 
@@ -106,9 +87,6 @@ public class DobbeltLenketListe<T> implements Liste<T>
 //                liste.add(a[i].toString());
 //            }
 //        }
-
-
-        //throw new UnsupportedOperationException("Ikke laget ennå!");
     }
 
     // subliste
@@ -186,12 +164,52 @@ public class DobbeltLenketListe<T> implements Liste<T>
     @Override
     public String toString()
     {
-        throw new UnsupportedOperationException("Ikke laget ennå!");
+        StringBuilder s = new StringBuilder();
+
+        s.append('[');
+
+        if (!tom())
+        {
+            Node<T> p = hode;
+            s.append(p.verdi);
+
+            p = p.neste;
+
+            while (p != null)  // tar med resten hvis det er noe mer
+            {
+                s.append(',').append(' ').append(p.verdi);
+                p = p.neste;
+            }
+        }
+
+        s.append(']');
+
+        return s.toString();
     }
 
     public String omvendtString()
     {
-        throw new UnsupportedOperationException("Ikke laget ennå!");
+        StringBuilder s = new StringBuilder();
+
+        s.append('[');
+
+        if (!tom())
+        {
+            Node<T> p = hale;
+            s.append(p.verdi);
+
+            p = p.forrige;
+
+            while (p != null)  // tar med resten hvis det er noe mer
+            {
+                s.append(',').append(' ').append(p.verdi);
+                p = p.forrige;
+            }
+        }
+
+        s.append(']');
+
+        return s.toString();
     }
 
     public static <T> void sorter(Liste<T> liste, Comparator<? super T> c)
