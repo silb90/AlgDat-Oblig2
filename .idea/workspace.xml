@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="993c8c94-62ca-47aa-80ed-5e6c897e9d5a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/DobbeltLenketListe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DobbeltLenketListe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="993c8c94-62ca-47aa-80ed-5e6c897e9d5a" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,11 +15,11 @@
       <file leaf-file-name="DobbeltLenketListe.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DobbeltLenketListe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="66" column="25" lean-forward="true" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
+            <state relative-caret-position="220">
+              <caret line="57" column="21" lean-forward="true" selection-start-line="57" selection-start-column="21" selection-end-line="58" selection-end-column="9" />
               <folding>
-                <element signature="e#1058#1059#0" expanded="true" />
-                <element signature="e#1133#1134#0" expanded="true" />
+                <element signature="e#905#906#0" expanded="true" />
+                <element signature="e#980#981#0" expanded="true" />
                 <element signature="e#1758#1759#0" expanded="true" />
                 <element signature="e#1833#1834#0" expanded="true" />
                 <element signature="e#1878#1879#0" expanded="true" />
@@ -134,9 +131,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="width" value="1098" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1072" />
+    <option name="width" value="855" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -267,7 +264,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="911" height="830" extended-state="0" />
+    <frame x="-6" y="0" width="878" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
@@ -335,11 +332,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DobbeltLenketListe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="66" column="25" lean-forward="true" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
+        <state relative-caret-position="220">
+          <caret line="57" column="21" lean-forward="true" selection-start-line="57" selection-start-column="21" selection-end-line="58" selection-end-column="9" />
           <folding>
-            <element signature="e#1058#1059#0" expanded="true" />
-            <element signature="e#1133#1134#0" expanded="true" />
+            <element signature="e#905#906#0" expanded="true" />
+            <element signature="e#980#981#0" expanded="true" />
             <element signature="e#1758#1759#0" expanded="true" />
             <element signature="e#1833#1834#0" expanded="true" />
             <element signature="e#1878#1879#0" expanded="true" />
