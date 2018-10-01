@@ -110,7 +110,17 @@ public class DobbeltLenketListe<T> implements Liste<T>
     @Override
     public boolean leggInn(T verdi)
     {
-        throw new UnsupportedOperationException("Ikke laget ennå!");
+        Objects.requireNonNull(verdi, "Null-verdi");
+
+        if (tom()) {
+            hode = hale = new Node<>(verdi, null,null);
+        } else {
+            hale = hale.neste = new Node<>(verdi, hale, null);
+        }
+
+        antall++;
+        endringer++;
+        return true;
     }
 
     @Override
