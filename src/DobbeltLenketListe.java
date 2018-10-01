@@ -53,18 +53,46 @@ public class DobbeltLenketListe<T> implements Liste<T>
 
         if (a.length == 0) return;
 
-        if (a[a.length - 1] != null) {
-            hode = hale = new Node<>(a[a.length-1], null, null);
-            antall++;
-        }
-
-        for (int i = a.length - 2; i >= 0; i--) {
+        // Vil legge indeksene til alle som er ulike null fra a inn i ny tabell
+        // Samtidig legge 1 til antall for hver gang man finner et objekt ulik null
+        ArrayList<Integer> index = new ArrayList<>();
+        for (int i = 0; i < a.length - 1; i++) {
             if (a[i] != null) {
-                hode = new Node<>(a[i], hale, hode);
-                hale = new Node<>(a[i], hode, hale);
+                index.add(i);
                 antall++;
             }
         }
+
+        if (antall == 0) return;
+
+        if (antall == 1) {
+            hode = hale = new Node<>(a[index.get(0)], null, null);
+        } else if (antall < 3) {
+            hode = new Node<>(a[index.get(0)], hale, null);
+            hale = new Node<>(a[index.get(1)], null, hale);
+        } else {
+            hode = new Node<>(a[index.get(0)], hale, null);
+            hale = new Node<>(a[index.get(index.size()-1)], null, hale);
+
+            for (int i = index.size() - 2; i >= 1; i--) {
+
+            }
+        }
+
+//        if (a[a.length - 1] != null) {
+//            hode = hale = new Node<>(a[a.length-1], null, null);
+//            antall++;
+//        }
+//
+//        for (int i = a.length - 2; i >= 0; i--) {
+//            if (a[i] != null) {
+//                hode = new Node<>(a[i], hale, hode);
+//                hale = new Node<>(a[i], hode, hale);
+//                antall++;
+//            }
+//        }
+
+
 
         //Sjekker om a inneholder en eller flere null-verdier
 
