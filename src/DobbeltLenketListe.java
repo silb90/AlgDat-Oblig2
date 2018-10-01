@@ -1,8 +1,4 @@
-import java.util.Comparator;
-import java.util.ConcurrentModificationException;
-import java.util.Iterator;
-import java.util.NoSuchElementException;
-import java.util.Objects;
+import java.util.*;
 
 public class DobbeltLenketListe<T> implements Liste<T>
 {
@@ -51,7 +47,9 @@ public class DobbeltLenketListe<T> implements Liste<T>
     {
         this();
 
-        Objects.requireNonNull(a, "Tabellen eksisterer ikke");
+        //Sjekker om a eksisterer.
+        Objects.requireNonNull(a, "Ikkje Lov! AKA  Tabellen a er null!");
+
 
         if (a.length == 0) return;
 
@@ -67,6 +65,22 @@ public class DobbeltLenketListe<T> implements Liste<T>
                 antall++;
             }
         }
+
+        //Sjekker om a inneholder en eller flere null-verdier
+
+        //LinkedList<String> liste = new LinkedList<>();
+
+//        String[] s = {toString()};
+//        LinkedList<String> liste = new DobbeltLenketListe<>(s);
+//        for (int i = 0; i < a.length; ++i){
+//
+//            if (a[i] != null){
+//                liste.add(a[i].toString());
+//            }
+//        }
+
+
+        //throw new UnsupportedOperationException("Ikke laget ennå!");
     }
 
     // subliste
