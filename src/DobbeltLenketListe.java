@@ -52,14 +52,17 @@ public class DobbeltLenketListe<T> implements Liste<T>
 
 
         //Sjekker om a inneholder en eller flere null-verdier
-        LinkedList<String> liste = new LinkedList<>();
-        for (int i = 0; i < a.length; ++i){
-            if (a[i] != null){
 
-                //liste.add(a[i]);
+        //LinkedList<String> liste = new LinkedList<>();
 
-            }
-        }
+//        String[] s = {toString()};
+//        LinkedList<String> liste = new DobbeltLenketListe<>(s);
+//        for (int i = 0; i < a.length; ++i){
+//
+//            if (a[i] != null){
+//                liste.add(a[i].toString());
+//            }
+//        }
 
 
         //throw new UnsupportedOperationException("Ikke laget ennå!");
