@@ -1001,8 +1001,7 @@ public class Oblig2Test {
             antallFeil++;
             System.out.println("Oppgave 7d: Feil i metoden nullstill()!");
         }
-
-        System.out.println(antallFeil);
+        
         return antallFeil;
 
     }
