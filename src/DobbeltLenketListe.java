@@ -208,7 +208,7 @@ public class DobbeltLenketListe<T> implements Liste<T>
             return false;
         } else if (q == hode) {
             hode = hode.neste;
-            hode.forrige = null;
+            if (antall > 1) hode.forrige = null;
         } else if (q == hale) {
             hale = hale.forrige;
             hale.neste = null;
@@ -235,10 +235,10 @@ public class DobbeltLenketListe<T> implements Liste<T>
 
         if (indeks == 0) {
             temp = hode.verdi;
-            hode = hode.neste;
-            hode.forrige = null;
-
-            if (antall == 1) {
+            if (antall > 1) {
+                hode = hode.neste;
+                hode.forrige = null;
+            } else {
                 hale = null;
                 hode.neste = null;
             }
@@ -263,13 +263,12 @@ public class DobbeltLenketListe<T> implements Liste<T>
     }
 
     @Override
-    public void nullstill()
-    {
-
+    public void nullstill() {
+        // Metode 1 - Denne er noe kjappere, rundt 1/3 kjappere mot Metode 2
+        // Ved en tabell på 5 mill. tall brukte metode 1 31ms, og metode 2 48ms.
         Node<T> p = hode, q;
 
-        while (p != null)
-        {
+        while (p != null) {
             q = p.neste;
             p.neste = null;
             p.verdi = null;
@@ -282,7 +281,8 @@ public class DobbeltLenketListe<T> implements Liste<T>
         endringer++;    // nullstilling er en endring
         antall = 0;           // antall lik 0 i en tom liste
 
-        //throw new UnsupportedOperationException("Ikke laget ennå!");
+        // Metode 2
+        // while (antall > 0) fjern(0);
     }
 
     // Bruker av og til over 20ms uavhengig av om man bruker metoden under, som er like metoden toString()
@@ -312,6 +312,7 @@ public class DobbeltLenketListe<T> implements Liste<T>
     }
 
     public String omvendtString() {
+        if (tom()) return "[]";
         StringJoiner joiner = new StringJoiner(", ", "[", "]");
         Node<T> p = hale;
         while (p != null){
