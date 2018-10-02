@@ -232,9 +232,15 @@ public class DobbeltLenketListe<T> implements Liste<T>
     }
 
     @Override
-    public T fjern(int indeks)
-    {
-        throw new UnsupportedOperationException("Ikke laget ennå!");
+    public T fjern(int indeks) {
+        indeksKontroll(indeks, false);
+        T verdi = finnNode(indeks).verdi;
+
+
+
+        endringer++;
+        antall--;
+        return verdi;
     }
 
     @Override
