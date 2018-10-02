@@ -1,3 +1,5 @@
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -87,6 +89,34 @@ public class Main {
         // Utskrift:
         // Lars Anders Bodil Kari Per Berit
         // Lars Anders Bodil Kari Per Berit
+
+        /**
+         * Oppgave 9
+         */
+        System.out.println();
+        DobbeltLenketListe<String> liste9 =
+                new DobbeltLenketListe<>(
+                        //new String[]{"Birger","Lars","Anders","Bodil","Kari","Per","Berit"});
+                        new String[]{"Birger", "Lars", "Berit"});
+        liste9.fjernHvis(name -> name.charAt(0) == 'B'); // fjerner navn som starter med B
+        System.out.println(liste9 + "\n" + liste9.omvendtString());
+        // Utskrift:
+        // [Lars, Anders, Kari, Per]
+        // [Per, Kari, Anders, Lars]
+
+        /**
+         * Oppgave 10
+         */
+//        String[] navn10 = {"Lars","Anders","Bodil","Kari","Per","Berit"};
+//        Liste<String> liste11 = new DobbeltLenketListe<>(navn10);
+//        Liste<String> liste12 = new EnkeltLenketListe<>(navn10);
+//        DobbeltLenketListe.sorter(liste11, Comparator.naturalOrder());
+//        DobbeltLenketListe.sorter(liste12, Comparator.naturalOrder());
+//        System.out.println(liste11); // [Anders, Berit, Bodil, Kari, Lars, Per]
+//        System.out.println(liste12); // [Anders, Berit, Bodil, Kari, Lars, Per]
+//        // Tabellen navn er upåvirket:
+//        System.out.println(Arrays.toString(navn10));
+//        // [Lars, Anders, Bodil, Kari, Per, Berit]
 
     }
 }
