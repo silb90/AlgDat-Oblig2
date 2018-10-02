@@ -149,15 +149,31 @@ public class DobbeltLenketListe<T> implements Liste<T>
     }
 
     @Override
-    public void leggInn(int indeks, T verdi)
-    {
-        throw new UnsupportedOperationException("Ikke laget ennå!");
+    public void leggInn(int indeks, T verdi) {
+        Objects.requireNonNull(verdi, "Nullverdi er ikke tillatt");
+        indeksKontroll(indeks, true);
+
+        if (tom()) {
+            hode = hale = new Node<>(verdi, null,null);
+        } else if (indeks == 0) {
+            hode = new Node<>(verdi, null, hode);
+            if (antall == 0) hale = hode;
+        } else if (indeks == antall) {
+            hale = hale.neste = new Node<>(verdi, hale, null);
+        } else {
+            // Trenger mer jobb, får en feil
+            Node<T> p = hode;
+            for (int i = 1; i < indeks; i++) p = p.neste;
+            p.neste = new Node<>(verdi, p, p.neste);
+        }
+
+        antall++;
+        endringer++;
     }
 
     @Override
-    public boolean inneholder(T verdi)
-    {
-        throw new UnsupportedOperationException("Ikke laget ennå!");
+    public boolean inneholder(T verdi) {
+        return indeksTil(verdi) != -1;
     }
 
     @Override
@@ -167,9 +183,20 @@ public class DobbeltLenketListe<T> implements Liste<T>
     }
 
     @Override
-    public int indeksTil(T verdi)
-    {
-        throw new UnsupportedOperationException("Ikke laget ennå!");
+    public int indeksTil(T verdi) {
+        if (verdi == null) return -1;
+
+        Node<T> p = hode;
+
+        // Starter fra hodet og gaar gjennom lista fram til verdien er funnet
+        // Saa fort den er funnet, blir den returnert, dvs. foerste fra venstre
+        // Kan ta tid om lista er lang
+        for (int i = 0; i < antall; i++) {
+            if (p.verdi.equals(verdi))
+                return i;
+            p = p.neste;
+        }
+        return -1;
     }
 
     @Override
