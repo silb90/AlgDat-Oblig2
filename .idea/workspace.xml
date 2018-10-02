@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/DobbeltLenketListe.java" line="179" />
-    <bookmark url="file://$PROJECT_DIR$/src/DobbeltLenketListe.java" line="275" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="993c8c94-62ca-47aa-80ed-5e6c897e9d5a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AlgDat-Oblig2/DobbeltLenketListe$DobbeltLenketListeIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgDat-Oblig2/DobbeltLenketListe$DobbeltLenketListeIterator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AlgDat-Oblig2/DobbeltLenketListe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgDat-Oblig2/DobbeltLenketListe.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgDat-Oblig2/Oblig2Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgDat-Oblig2/Oblig2Test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DobbeltLenketListe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DobbeltLenketListe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Oblig2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Oblig2Test.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,8 +25,8 @@
           <file leaf-file-name="DobbeltLenketListe.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/DobbeltLenketListe.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="458">
-                  <caret line="275" column="9" lean-forward="true" selection-start-line="275" selection-start-column="9" selection-end-line="275" selection-end-column="9" />
+                <state relative-caret-position="539">
+                  <caret line="343" column="38" lean-forward="true" selection-start-line="343" selection-start-column="38" selection-end-line="343" selection-end-column="38" />
                   <folding>
                     <element signature="e#4490#4491#0" expanded="true" />
                     <element signature="e#4519#4520#0" expanded="true" />
@@ -42,10 +36,6 @@
                     <element signature="e#5766#5767#0" expanded="true" />
                     <element signature="e#8541#8542#0" expanded="true" />
                     <element signature="e#8616#8617#0" expanded="true" />
-                    <element signature="e#8667#8668#0" expanded="true" />
-                    <element signature="e#8742#8743#0" expanded="true" />
-                    <element signature="e#8658#8659#0" expanded="true" />
-                    <element signature="e#8741#8742#0" expanded="true" />
                     <element signature="e#8803#8804#0" expanded="true" />
                     <element signature="e#8881#8882#0" expanded="true" />
                   </folding>
@@ -66,7 +56,7 @@
             <entry file="file://$PROJECT_DIR$/src/Liste.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="594">
-                  <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+                  <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
                 </state>
               </provider>
             </entry>
@@ -75,7 +65,7 @@
             <entry file="file://$PROJECT_DIR$/src/Main.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="891">
-                  <caret line="75" column="46" lean-forward="true" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
+                  <caret line="75" column="46" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
                 </state>
               </provider>
             </entry>
@@ -96,8 +86,12 @@
           <file leaf-file-name="EnkeltLenketListe.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/EnkeltLenketListe.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1132">
-                  <caret line="186" column="26" lean-forward="true" selection-start-line="186" selection-start-column="26" selection-end-line="186" selection-end-column="26" />
+                <state relative-caret-position="-509">
+                  <caret line="305" column="8" selection-start-line="305" selection-start-column="8" selection-end-line="305" selection-end-column="47" />
+                  <folding>
+                    <element signature="e#8497#8498#0" expanded="true" />
+                    <element signature="e#8551#8552#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -330,7 +324,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="30" />
+      <option name="time" value="35" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -347,10 +341,6 @@
             <element signature="e#5766#5767#0" expanded="true" />
             <element signature="e#8541#8542#0" expanded="true" />
             <element signature="e#8616#8617#0" expanded="true" />
-            <element signature="e#8667#8668#0" expanded="true" />
-            <element signature="e#8742#8743#0" expanded="true" />
-            <element signature="e#8658#8659#0" expanded="true" />
-            <element signature="e#8741#8742#0" expanded="true" />
             <element signature="e#8803#8804#0" expanded="true" />
             <element signature="e#8881#8882#0" expanded="true" />
           </folding>
@@ -439,10 +429,6 @@
             <element signature="e#5766#5767#0" expanded="true" />
             <element signature="e#8541#8542#0" expanded="true" />
             <element signature="e#8616#8617#0" expanded="true" />
-            <element signature="e#8667#8668#0" expanded="true" />
-            <element signature="e#8742#8743#0" expanded="true" />
-            <element signature="e#8658#8659#0" expanded="true" />
-            <element signature="e#8741#8742#0" expanded="true" />
             <element signature="e#8803#8804#0" expanded="true" />
             <element signature="e#8881#8882#0" expanded="true" />
           </folding>
@@ -462,10 +448,6 @@
             <element signature="e#5766#5767#0" expanded="true" />
             <element signature="e#8541#8542#0" expanded="true" />
             <element signature="e#8616#8617#0" expanded="true" />
-            <element signature="e#8667#8668#0" expanded="true" />
-            <element signature="e#8742#8743#0" expanded="true" />
-            <element signature="e#8658#8659#0" expanded="true" />
-            <element signature="e#8741#8742#0" expanded="true" />
             <element signature="e#8803#8804#0" expanded="true" />
             <element signature="e#8881#8882#0" expanded="true" />
           </folding>
@@ -513,10 +495,6 @@
             <element signature="e#5766#5767#0" expanded="true" />
             <element signature="e#8541#8542#0" expanded="true" />
             <element signature="e#8616#8617#0" expanded="true" />
-            <element signature="e#8667#8668#0" expanded="true" />
-            <element signature="e#8742#8743#0" expanded="true" />
-            <element signature="e#8658#8659#0" expanded="true" />
-            <element signature="e#8741#8742#0" expanded="true" />
             <element signature="e#8803#8804#0" expanded="true" />
             <element signature="e#8881#8882#0" expanded="true" />
           </folding>
@@ -564,10 +542,6 @@
             <element signature="e#5766#5767#0" expanded="true" />
             <element signature="e#8541#8542#0" expanded="true" />
             <element signature="e#8616#8617#0" expanded="true" />
-            <element signature="e#8667#8668#0" expanded="true" />
-            <element signature="e#8742#8743#0" expanded="true" />
-            <element signature="e#8658#8659#0" expanded="true" />
-            <element signature="e#8741#8742#0" expanded="true" />
             <element signature="e#8803#8804#0" expanded="true" />
             <element signature="e#8881#8882#0" expanded="true" />
           </folding>
@@ -656,10 +630,6 @@
             <element signature="e#5766#5767#0" expanded="true" />
             <element signature="e#8541#8542#0" expanded="true" />
             <element signature="e#8616#8617#0" expanded="true" />
-            <element signature="e#8667#8668#0" expanded="true" />
-            <element signature="e#8742#8743#0" expanded="true" />
-            <element signature="e#8658#8659#0" expanded="true" />
-            <element signature="e#8741#8742#0" expanded="true" />
             <element signature="e#8803#8804#0" expanded="true" />
             <element signature="e#8881#8882#0" expanded="true" />
           </folding>
@@ -679,10 +649,6 @@
             <element signature="e#5766#5767#0" expanded="true" />
             <element signature="e#8541#8542#0" expanded="true" />
             <element signature="e#8616#8617#0" expanded="true" />
-            <element signature="e#8667#8668#0" expanded="true" />
-            <element signature="e#8742#8743#0" expanded="true" />
-            <element signature="e#8658#8659#0" expanded="true" />
-            <element signature="e#8741#8742#0" expanded="true" />
             <element signature="e#8803#8804#0" expanded="true" />
             <element signature="e#8881#8882#0" expanded="true" />
           </folding>
@@ -730,10 +696,6 @@
             <element signature="e#5766#5767#0" expanded="true" />
             <element signature="e#8541#8542#0" expanded="true" />
             <element signature="e#8616#8617#0" expanded="true" />
-            <element signature="e#8667#8668#0" expanded="true" />
-            <element signature="e#8742#8743#0" expanded="true" />
-            <element signature="e#8658#8659#0" expanded="true" />
-            <element signature="e#8741#8742#0" expanded="true" />
             <element signature="e#8803#8804#0" expanded="true" />
             <element signature="e#8881#8882#0" expanded="true" />
           </folding>
@@ -784,21 +746,14 @@
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="891">
-          <caret line="75" column="46" lean-forward="true" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
+          <caret line="75" column="46" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Liste.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
-          <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EnkeltLenketListe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -809,10 +764,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/EnkeltLenketListe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DobbeltLenketListe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="275" column="9" lean-forward="true" selection-start-line="275" selection-start-column="9" selection-end-line="275" selection-end-column="9" />
+        <state relative-caret-position="539">
+          <caret line="343" column="38" lean-forward="true" selection-start-line="343" selection-start-column="38" selection-end-line="343" selection-end-column="38" />
           <folding>
             <element signature="e#4490#4491#0" expanded="true" />
             <element signature="e#4519#4520#0" expanded="true" />
@@ -822,10 +784,6 @@
             <element signature="e#5766#5767#0" expanded="true" />
             <element signature="e#8541#8542#0" expanded="true" />
             <element signature="e#8616#8617#0" expanded="true" />
-            <element signature="e#8667#8668#0" expanded="true" />
-            <element signature="e#8742#8743#0" expanded="true" />
-            <element signature="e#8658#8659#0" expanded="true" />
-            <element signature="e#8741#8742#0" expanded="true" />
             <element signature="e#8803#8804#0" expanded="true" />
             <element signature="e#8881#8882#0" expanded="true" />
           </folding>

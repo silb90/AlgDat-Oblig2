@@ -75,5 +75,18 @@ public class Main {
 
         System.out.println(liste5.toString());
         System.out.println(liste5.omvendtString());
+
+        /**
+         * Oppgave 8
+         */
+        String[] navn = {"Lars","Anders","Bodil","Kari","Per","Berit"};
+        Liste<String> liste8 = new DobbeltLenketListe<>(navn);
+        liste.forEach(ss -> System.out.print(ss + " "));
+        System.out.println();
+        for (String ss : liste8) System.out.print(ss + " ");
+        // Utskrift:
+        // Lars Anders Bodil Kari Per Berit
+        // Lars Anders Bodil Kari Per Berit
+
     }
 }
