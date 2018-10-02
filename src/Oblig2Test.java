@@ -25,7 +25,7 @@ public class Oblig2Test {
         antallFeil += oppgave4();
         antallFeil += oppgave5();
         //antallFeil += oppgave6();
-        //antallFeil += oppgave7();
+        antallFeil += oppgave7();
         //antallFeil += oppgave8();
         //antallFeil += oppgave9();
         //antallFeil += oppgave10();
@@ -966,7 +966,7 @@ public class Oblig2Test {
         }
         return antallFeil;
     }
-
+*/
     //// Oppgave 7 ////////////////////////////
 
     public static int oppgave7() {
@@ -1001,9 +1001,11 @@ public class Oblig2Test {
             System.out.println("Oppgave 7d: Feil i metoden nullstill()!");
         }
 
+        System.out.println(antallFeil);
         return antallFeil;
-    }
 
+    }
+/*
     //// Oppgave 8 ////////////////////////////
 
     public static int oppgave8() {
