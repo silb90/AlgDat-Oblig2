@@ -26,7 +26,7 @@ public class DobbeltLenketListe<T> implements Liste<T>
     private Node<T> hode;          // peker til den første i listen
     private Node<T> hale;          // peker til den siste i listen
     private int antall;            // antall noder i listen
-    private int endringer;   // antall endringer i listen
+    private int endringer;          // antall endringer i listen
 
     // hjelpemetode
     private Node<T> finnNode(int indeks) {
@@ -330,7 +330,7 @@ public class DobbeltLenketListe<T> implements Liste<T>
     @Override
     public Iterator<T> iterator()
     {
-        throw new UnsupportedOperationException("Ikke laget ennå!");
+        return new DobbeltLenketListeIterator();
     }
 
     public Iterator<T> iterator(int indeks)
@@ -374,7 +374,7 @@ public class DobbeltLenketListe<T> implements Liste<T>
 
             fjernOK = true;
 
-            T tmp = hode.verdi;
+            T tmp = denne.verdi;
             denne = denne.neste;
 
             return tmp;
