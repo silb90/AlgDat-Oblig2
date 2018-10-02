@@ -260,40 +260,40 @@ public class DobbeltLenketListe<T> implements Liste<T>
         //throw new UnsupportedOperationException("Ikke laget ennå!");
     }
 
-
+    // Bruker av og til over 20ms uavhengig av om man bruker metoden under, som er like metoden toString()
+    // fra EnkeltLenketListe, eller metoden omvendtString() under, som bruker StringJoiner
     public String toString(){
-        StringJoiner joiner = new StringJoiner(", ", "[", "]");
-        Node<T> p = hode;
-        while (p != null){
-            joiner.add(String.valueOf(p.verdi));
-            p = p.neste;
-        }
-        return joiner.toString();
-    }
-
-    public String omvendtString()
-    {
         StringBuilder s = new StringBuilder();
 
         s.append('[');
 
         if (!tom())
         {
-            Node<T> p = hale;
+            Node<T> p = hode;
             s.append(p.verdi);
 
-            p = p.forrige;
+            p = p.neste;
 
             while (p != null)  // tar med resten hvis det er noe mer
             {
                 s.append(',').append(' ').append(p.verdi);
-                p = p.forrige;
+                p = p.neste;
             }
         }
 
         s.append(']');
 
         return s.toString();
+    }
+
+    public String omvendtString() {
+        StringJoiner joiner = new StringJoiner(", ", "[", "]");
+        Node<T> p = hale;
+        while (p != null){
+            joiner.add(String.valueOf(p.verdi));
+            p = p.forrige;
+        }
+        return joiner.toString();
     }
 
     public static <T> void sorter(Liste<T> liste, Comparator<? super T> c)
