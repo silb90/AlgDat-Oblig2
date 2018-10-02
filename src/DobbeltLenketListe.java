@@ -339,7 +339,19 @@ public class DobbeltLenketListe<T> implements Liste<T>
         @Override
         public T next()
         {
-            throw new UnsupportedOperationException("Ikke laget ennå!");
+            if (iteratorendringer != endringer) {
+                throw new ConcurrentModificationException("iteratorendringer samsvarer ikke med endringer");
+            }
+            else if (!hasNext()){
+                throw new NoSuchElementException("Ikke flere elementer i lista!");
+            }
+
+            fjernOK = true;
+
+            T tmp = hode.verdi;
+            denne = denne.neste;
+
+            return tmp;
         }
 
         @Override
