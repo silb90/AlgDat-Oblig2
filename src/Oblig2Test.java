@@ -978,13 +978,18 @@ public class Oblig2Test {
             liste.leggInn(i);
         }
 
+
+        System.out.println(liste.toString());
+
         liste.nullstill();
+
 
         if (liste.antall() != 0) {
             antallFeil++;
             System.out.println
                     ("Oppgave 7a: Feil i antalloppdateringen i nullstill!");
         }
+        System.out.println(liste.toString());
 
         if (!liste.toString().equals("[]")) {
             antallFeil++;
