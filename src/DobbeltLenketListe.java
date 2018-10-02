@@ -70,33 +70,54 @@ public class DobbeltLenketListe<T> implements Liste<T>
         this();
 
         //Sjekker om a eksisterer.
-        Objects.requireNonNull(a, "Ikkje Lov! AKA  Tabellen a er null!");
+        Objects.requireNonNull(a, "Ikkje Lov! -->  Tabellen a er null!");
 
         // Sjekker om a har objekter / har innhold
         if (a.length == 0) return;
 
-        // Vil samle inn indeksene til alle elementene i a som ikke er nullpointere
-        // Samtidig legge 1 til antallet for hver gang man ikke har en nullpointer
-        ArrayList<Integer> index = new ArrayList<>();
-        for (int i = 0; i < a.length; i++) {
-            if (a[i] != null) {
-                index.add(i);
+
+       hode = new Node<>(a[0], null, null);
+       antall++;
+
+        Node hode_tmp = hode;
+        Node q = null;
+
+        for (int i = 1; i < a.length; i++){
+            if (a[i] != null){
+                q= new Node<>(a[i], hode_tmp, null);
+
+                hode_tmp.neste = q;
+                q.forrige = hode_tmp;
+                hode_tmp = q;
+                q = q.neste;
+
                 antall++;
             }
         }
 
-        // Hvis det kun finnes nullpointer objekter, returner
-        if (antall == 0) return;
 
-        // Videre lages en Node for hode og hale
-        hode = hale = new Node<>(a[index.get(index.size() - 1)], null, null);
+//        // Vil samle inn indeksene til alle elementene i a som ikke er nullpointere
+//        // Samtidig legge 1 til antallet for hver gang man ikke har en nullpointer
+//        ArrayList<Integer> index = new ArrayList<>();
+//        for (int i = 0; i < a.length; i++) {
+//            if (a[i] != null) {
+//                index.add(i);
+//                antall++;
+//            }
+//        }
 
-        // Vil saa iterere gjennom og lage et nyte hode for hver gang, som samtidig peker til neste og forrige
-        for (int i = index.size() - 2; i >= 0; i--) {
-            Node<T> tmp = hode;
-            hode = new Node<>(a[index.get(i)], null, tmp);
-            tmp.forrige = hode;
-        }
+//        // Hvis det kun finnes nullpointer objekter, returner
+//        if (antall == 0) return;
+//
+//        // Videre lages en Node for hode og hale
+//        hode = hale = new Node<>(a[index.get(index.size() - 1)], null, null);
+//
+//        // Vil saa iterere gjennom og lage et nyte hode for hver gang, som samtidig peker til neste og forrige
+//        for (int i = index.size() - 2; i >= 0; i--) {
+//            Node<T> tmp = hode;
+//            hode = new Node<>(a[index.get(i)], null, tmp);
+//            tmp.forrige = hode;
+//        }
 
         //LinkedList<String> liste = new LinkedList<>();
 
@@ -230,30 +251,15 @@ public class DobbeltLenketListe<T> implements Liste<T>
         throw new UnsupportedOperationException("Ikke laget ennå!");
     }
 
-    @Override
-    public String toString()
-    {
-        StringBuilder s = new StringBuilder();
 
-        s.append('[');
-
-        if (!tom())
-        {
-            Node<T> p = hode;
-            s.append(p.verdi);
-
+    public String toString(){
+        StringJoiner joiner = new StringJoiner(" ", "[", "]");
+        Node<T> p = hode;
+        while (p != null){
+            joiner.add(String.valueOf(p.verdi));
             p = p.neste;
-
-            while (p != null)  // tar med resten hvis det er noe mer
-            {
-                s.append(',').append(' ').append(p.verdi);
-                p = p.neste;
-            }
         }
-
-        s.append(']');
-
-        return s.toString();
+        return joiner.toString();
     }
 
     public String omvendtString()
