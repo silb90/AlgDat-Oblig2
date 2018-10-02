@@ -328,14 +328,13 @@ public class DobbeltLenketListe<T> implements Liste<T>
     }
 
     @Override
-    public Iterator<T> iterator()
-    {
+    public Iterator<T> iterator() {
         return new DobbeltLenketListeIterator();
     }
 
-    public Iterator<T> iterator(int indeks)
-    {
-        throw new UnsupportedOperationException("Ikke laget ennå!");
+    public Iterator<T> iterator(int indeks) {
+        indeksKontroll(indeks, false);
+        return new DobbeltLenketListeIterator(indeks);
     }
 
     private class DobbeltLenketListeIterator implements Iterator<T>
@@ -344,16 +343,15 @@ public class DobbeltLenketListe<T> implements Liste<T>
         private boolean fjernOK;
         private int iteratorendringer;
 
-        private DobbeltLenketListeIterator()
-        {
+        private DobbeltLenketListeIterator() {
             denne = hode;     // denne starter på den første i listen
             fjernOK = false;  // blir sann når next() kalles
             iteratorendringer = endringer;  // teller endringer
         }
 
-        private DobbeltLenketListeIterator(int indeks)
-        {
-            throw new UnsupportedOperationException("Ikke laget ennå!");
+        private DobbeltLenketListeIterator(int indeks) {
+            this();
+            denne = finnNode(indeks);
         }
 
         @Override
@@ -381,9 +379,36 @@ public class DobbeltLenketListe<T> implements Liste<T>
         }
 
         @Override
-        public void remove()
-        {
-            throw new UnsupportedOperationException("Ikke laget ennå!");
+        public void remove() {
+            if (!fjernOK) throw new IllegalStateException("Ikke tillatt aa kalle metoden / fjernOK == false");
+
+            if (endringer != iteratorendringer)
+                throw new ConcurrentModificationException("Listen er endret / endringer != iteratorendringer");
+
+            fjernOK = false;
+
+            if (antall == 1) {
+                hale = null;
+                hode.neste = null;
+            } else if (denne == null) {
+                Node<T> tempHale = hale;
+                hale = hale.forrige;
+                tempHale.forrige = null;
+                hale.neste = null;
+            } else if (denne.forrige == hode) {
+                hode = hode.neste;
+                hode.forrige = null;
+            } else {
+                //Node<T> tempMidt = denne.forrige;
+                denne.forrige.neste = denne.neste;
+                denne.neste.forrige = denne.forrige;
+                denne.neste = null;
+                denne.forrige = null;
+            }
+
+            endringer++;
+            iteratorendringer++;
+            antall--;
         }
 
     } // DobbeltLenketListeIterator
