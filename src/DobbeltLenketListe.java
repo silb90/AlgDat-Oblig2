@@ -252,7 +252,7 @@ public class DobbeltLenketListe<T> implements Liste<T>
             p = q;
         }
 
-//        hode = hale = null;
+        hode = hale = null;
 
         endringer++;    // nullstilling er en endring
         antall = 0;           // antall lik 0 i en tom liste
