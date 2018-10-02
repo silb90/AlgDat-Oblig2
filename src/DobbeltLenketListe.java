@@ -64,63 +64,31 @@ public class DobbeltLenketListe<T> implements Liste<T>
     }
 
     // konstruktør
-    public DobbeltLenketListe(T[] a)
-    {
-        // Setter verdiene via konstruktoeren over
+    public DobbeltLenketListe(T[] a) {
         this();
-
-        //Sjekker om a eksisterer.
         Objects.requireNonNull(a, "Ikkje Lov! -->  Tabellen a er null!");
-
-        // Sjekker om a har objekter / har innhold
         if (a.length == 0) return;
 
-
-    /**
-        hode = new Node<>(a[0], null, null);
-        antall++;
-
-        Node hode_tmp = hode;
-        Node q = null;
-
-        for (int i = 1; i < a.length; i++){
-            if (a[i] != null){
-                q= new Node<>(a[i], hode_tmp, null);
-
-                hode_tmp.neste = q;
-                q.forrige = hode_tmp;
-                hode_tmp = q;
-                q = q.neste;
-
-                antall++;
-            }
-        }
-     **/
-
-
-        // Vil samle inn indeksene til alle elementene i a som ikke er nullpointere
-        // Samtidig legge 1 til antallet for hver gang man ikke har en nullpointer
-        ArrayList<Integer> index = new ArrayList<>();
+        hode = hale = new Node<>(a[0], null, null);
+        Node<T> temp = hode;
         for (int i = 0; i < a.length; i++) {
-            if (a[i] != null) {
-                index.add(i);
-                antall++;
+            if (a[i] == null)
+                continue;
+
+            Node<T> newNode = new Node<>(a[i], null, null);
+
+            if (antall == 0) {
+                hode = hale = newNode;
+            } else {
+                newNode.forrige = temp;
+                hale.neste = newNode;
+                hale = newNode;
+                temp = newNode;
             }
+            antall++;
         }
 
-        // Hvis det kun finnes nullpointer objekter, returner
         if (antall == 0) return;
-
-        // Videre lages en Node for hode og hale
-        hode = hale = new Node<>(a[index.get(index.size() - 1)], null, null);
-
-        // Vil saa iterere gjennom og lage et nyte hode for hver gang, som samtidig peker til neste og forrige
-        for (int i = index.size() - 2; i >= 0; i--) {
-            Node<T> tmp = hode;
-            hode = new Node<>(a[index.get(i)], null, tmp);
-            tmp.forrige = hode;
-        }
-
     }
 
     // subliste
