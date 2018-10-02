@@ -76,8 +76,9 @@ public class DobbeltLenketListe<T> implements Liste<T>
         if (a.length == 0) return;
 
 
-       hode = new Node<>(a[0], null, null);
-       antall++;
+    /**
+        hode = new Node<>(a[0], null, null);
+        antall++;
 
         Node hode_tmp = hode;
         Node q = null;
@@ -94,41 +95,32 @@ public class DobbeltLenketListe<T> implements Liste<T>
                 antall++;
             }
         }
+     **/
 
 
-//        // Vil samle inn indeksene til alle elementene i a som ikke er nullpointere
-//        // Samtidig legge 1 til antallet for hver gang man ikke har en nullpointer
-//        ArrayList<Integer> index = new ArrayList<>();
-//        for (int i = 0; i < a.length; i++) {
-//            if (a[i] != null) {
-//                index.add(i);
-//                antall++;
-//            }
-//        }
+        // Vil samle inn indeksene til alle elementene i a som ikke er nullpointere
+        // Samtidig legge 1 til antallet for hver gang man ikke har en nullpointer
+        ArrayList<Integer> index = new ArrayList<>();
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] != null) {
+                index.add(i);
+                antall++;
+            }
+        }
 
-//        // Hvis det kun finnes nullpointer objekter, returner
-//        if (antall == 0) return;
-//
-//        // Videre lages en Node for hode og hale
-//        hode = hale = new Node<>(a[index.get(index.size() - 1)], null, null);
-//
-//        // Vil saa iterere gjennom og lage et nyte hode for hver gang, som samtidig peker til neste og forrige
-//        for (int i = index.size() - 2; i >= 0; i--) {
-//            Node<T> tmp = hode;
-//            hode = new Node<>(a[index.get(i)], null, tmp);
-//            tmp.forrige = hode;
-//        }
+        // Hvis det kun finnes nullpointer objekter, returner
+        if (antall == 0) return;
 
-        //LinkedList<String> liste = new LinkedList<>();
+        // Videre lages en Node for hode og hale
+        hode = hale = new Node<>(a[index.get(index.size() - 1)], null, null);
 
-//        String[] s = {toString()};
-//        LinkedList<String> liste = new DobbeltLenketListe<>(s);
-//        for (int i = 0; i < a.length; ++i){
-//
-//            if (a[i] != null){
-//                liste.add(a[i].toString());
-//            }
-//        }
+        // Vil saa iterere gjennom og lage et nyte hode for hver gang, som samtidig peker til neste og forrige
+        for (int i = index.size() - 2; i >= 0; i--) {
+            Node<T> tmp = hode;
+            hode = new Node<>(a[index.get(i)], null, tmp);
+            tmp.forrige = hode;
+        }
+
     }
 
     // subliste
@@ -253,7 +245,7 @@ public class DobbeltLenketListe<T> implements Liste<T>
 
 
     public String toString(){
-        StringJoiner joiner = new StringJoiner(" ", "[", "]");
+        StringJoiner joiner = new StringJoiner(", ", "[", "]");
         Node<T> p = hode;
         while (p != null){
             joiner.add(String.valueOf(p.verdi));
