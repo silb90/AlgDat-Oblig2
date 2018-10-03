@@ -1,5 +1,12 @@
 import java.util.*;
 
+/** Gruppemedlemmer:
+ *
+ * Sondre Bitubekk - s321113
+ * Jasotharan Cyril - s325909
+ * Silje Bjoerknes - s320752
+ */
+
 public class DobbeltLenketListe<T> implements Liste<T>
 {
     private static final class Node<T>   // en indre nodeklasse
