@@ -7,35 +7,28 @@ import java.util.*;
  * Silje Bjoerknes - s320752
  */
 
-public class DobbeltLenketListe<T> implements Liste<T>
-{
-    private static final class Node<T>   // en indre nodeklasse
-    {
-        // instansvariabler
+public class DobbeltLenketListe<T> implements Liste<T> {
+    private static final class Node<T> {
         private T verdi;
         private Node<T> forrige, neste;
 
-        private Node(T verdi, Node<T> forrige, Node<T> neste)  // konstruktør
-        {
+        private Node(T verdi, Node<T> forrige, Node<T> neste) {
             this.verdi = verdi;
             this.forrige = forrige;
             this.neste = neste;
         }
 
-        protected Node(T verdi)  // konstruktør
-        {
+        protected Node(T verdi) {
             this(verdi, null, null);
         }
 
-    } // Node
+    }
 
-    // instansvariabler
-    private Node<T> hode;          // peker til den første i listen
-    private Node<T> hale;          // peker til den siste i listen
-    private int antall;            // antall noder i listen
-    private int endringer;          // antall endringer i listen
+    private Node<T> hode;
+    private Node<T> hale;
+    private int antall;
+    private int endringer;
 
-    // hjelpemetode
     private Node<T> finnNode(int indeks) {
         if(indeks < antall / 2) {
             Node<T> p = hode;
@@ -49,28 +42,25 @@ public class DobbeltLenketListe<T> implements Liste<T>
     }
 
     private static void fratilKontroll(int antall, int fra, int til) {
-        if (fra < 0)                                  // fra er negativ
+        if (fra < 0)
             throw new IndexOutOfBoundsException
                     ("fra(" + fra + ") er negativ!");
 
-        if (til > antall)                          // til er utenfor tabellen
+        if (til > antall)
             throw new IndexOutOfBoundsException
                     ("til(" + til + ") > antall(" + antall + ")");
 
-        if (fra > til)                                // fra er større enn til
+        if (fra > til)
             throw new IllegalArgumentException
                     ("fra(" + fra + ") > til(" + til + ") - illegalt intervall!");
     }
 
-    // konstruktør
-    public DobbeltLenketListe()
-    {
+    public DobbeltLenketListe() {
         hode = hale = null;
         antall = 0;
         endringer = 0;
     }
 
-    // konstruktør
     public DobbeltLenketListe(T[] a) {
         this();
         Objects.requireNonNull(a, "Ikkje Lov! -->  Tabellen a er null!");
@@ -116,7 +106,6 @@ public class DobbeltLenketListe<T> implements Liste<T>
 //        }
     }
 
-    // subliste
     public Liste<T> subliste(int fra, int til) {
         fratilKontroll(antall, fra, til);
         Liste<T> tmpListe = new DobbeltLenketListe<>();
@@ -139,8 +128,7 @@ public class DobbeltLenketListe<T> implements Liste<T>
     }
 
     @Override
-    public boolean leggInn(T verdi)
-    {
+    public boolean leggInn(T verdi) {
         Objects.requireNonNull(verdi, "Null-verdi");
 
         if (tom()) {
@@ -343,8 +331,9 @@ public class DobbeltLenketListe<T> implements Liste<T>
 
     // Metoden er ikke spesielt effektiv - bruker bobblesortering
     // Ved testing bruker den rundt 6 ganger lengre tid paa en tilfeldig permutasjon
-    // naar vi dobbler mengden tall
-    // Dvs. at den er gjennomsnittlig av noe imellom kvadratisk og kubisk orden
+    // naar vi dobbler mengden tall. Dvs. at den er gjennomsnittlig av noe imellom
+    // kvadratisk og kubisk orden ala n^3
+    // Man kunne ha byttet om paa nodene istedet for aa kjoere oppdater metoden
     public static <T> void sorter(Liste<T> liste, Comparator<? super T> c) {
         for (int n = liste.antall(); n > 1; n--) {
             for (int i = 1; i < n; i++) {
@@ -368,8 +357,7 @@ public class DobbeltLenketListe<T> implements Liste<T>
         return new DobbeltLenketListeIterator(indeks);
     }
 
-    private class DobbeltLenketListeIterator implements Iterator<T>
-    {
+    private class DobbeltLenketListeIterator implements Iterator<T> {
         private Node<T> denne;
         private boolean fjernOK;
         private int iteratorendringer;
