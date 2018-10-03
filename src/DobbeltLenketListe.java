@@ -69,26 +69,48 @@ public class DobbeltLenketListe<T> implements Liste<T>
         Objects.requireNonNull(a, "Ikkje Lov! -->  Tabellen a er null!");
         if (a.length == 0) return;
 
-        hode = hale = new Node<>(a[0], null, null);
-        Node<T> temp = hode;
+        // Konstruktøren under gir en feil
+        // F.eks. {"Lars", "Birger"}
+        // Hode = Birger, Hale = Lars. Lars.forrige = Birger
+        // Men Birger.neste = Lars.forrige = Birger
+//        hode = hale = new Node<>(a[0], null, null);
+//        Node<T> temp = hode;
+//        for (int i = 0; i < a.length; i++) {
+//            if (a[i] == null)
+//                continue;
+//
+//            Node<T> newNode = new Node<>(a[i], null, null);
+//
+//            if (antall == 0) {
+//                hode = hale = newNode;
+//            } else {
+//                newNode.forrige = temp;
+//                hale.neste = newNode;
+//                hale = newNode;
+//                temp = newNode;
+//            }
+//            antall++;
+//        }
+
+        // Eksempel med arraylist
+        ArrayList<Integer> index = new ArrayList<>();
         for (int i = 0; i < a.length; i++) {
-            if (a[i] == null)
-                continue;
-
-            Node<T> newNode = new Node<>(a[i], null, null);
-
-            if (antall == 0) {
-                hode = hale = newNode;
-            } else {
-                newNode.forrige = temp;
-                hale.neste = newNode;
-                hale = newNode;
-                temp = newNode;
+            if (a[i] != null) {
+                index.add(i);
+                antall++;
             }
-            antall++;
         }
 
         if (antall == 0) return;
+
+        hode = hale = new Node<>(a[index.get(index.size() - 1)], null, null);
+
+        // Vil saa iterere gjennom og lage et nyte hode for hver gang, som samtidig peker til neste og forrige
+        for (int i = index.size() - 2; i >= 0; i--) {
+            Node<T> tmp = hode;
+            hode = new Node<>(a[index.get(i)], null, tmp);
+            tmp.forrige = hode;
+        }
     }
 
     // subliste
@@ -361,8 +383,7 @@ public class DobbeltLenketListe<T> implements Liste<T>
         }
 
         @Override
-        public T next()
-        {
+        public T next() {
             if (iteratorendringer != endringer) {
                 throw new ConcurrentModificationException("iteratorendringer samsvarer ikke med endringer");
             }
@@ -387,30 +408,31 @@ public class DobbeltLenketListe<T> implements Liste<T>
 
             fjernOK = false;
 
-            if (antall == 1) {
+            //System.out.println(denne.forrige == hode);
+
+            if (antall == 1) {  // Dersom det kun er en Node
                 hale = null;
                 hode.neste = null;
-            } else if (denne == null) {
+            } else if (denne == null) { //Bakerste Node skal fjernes
                 Node<T> tempHale = hale;
                 hale = hale.forrige;
-                tempHale.forrige = null;
                 hale.neste = null;
-            } else if (denne.forrige == hode) {
+                tempHale.forrige = null;
+            } else if (denne.forrige == hode) { //Foerste Node skal fjernes
                 hode = hode.neste;
                 hode.forrige = null;
-            } else {
-                //Node<T> tempMidt = denne.forrige;
-                denne.forrige.neste = denne.neste;
-                denne.neste.forrige = denne.forrige;
-                denne.neste = null;
-                denne.forrige = null;
+            } else { // Dersom Noder i midten skal fjernes
+                Node<T> temp = denne.forrige.forrige; // denne.forrige skal fjernes
+                temp.neste = denne;
+                denne.forrige = temp;
+                denne.forrige.forrige = null;
+                denne.forrige.neste = null;
             }
 
             endringer++;
             iteratorendringer++;
             antall--;
         }
-
     } // DobbeltLenketListeIterator
 
 } // DobbeltLenketListe

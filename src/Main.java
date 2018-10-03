@@ -96,8 +96,8 @@ public class Main {
         System.out.println();
         DobbeltLenketListe<String> liste9 =
                 new DobbeltLenketListe<>(
-                        //new String[]{"Birger","Lars","Anders","Bodil","Kari","Per","Berit"});
-                        new String[]{"Birger", "Lars", "Berit"});
+                        new String[]{"Birger","Lars","Anders","Bodil","Kari","Per","Berit"});
+                        //new String[]{"Birger", "Lars", "Bodil"});
         liste9.fjernHvis(name -> name.charAt(0) == 'B'); // fjerner navn som starter med B
         System.out.println(liste9 + "\n" + liste9.omvendtString());
         // Utskrift:
