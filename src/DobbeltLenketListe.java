@@ -69,46 +69,45 @@ public class DobbeltLenketListe<T> implements Liste<T>
         Objects.requireNonNull(a, "Ikkje Lov! -->  Tabellen a er null!");
         if (a.length == 0) return;
 
-        // Konstruktøren under gir en feil
-        // Hode.neste, hode.neste.forrige = hode, hode.neste.forrige.neste/forrige = Null
-//        hode = hale = new Node<>(a[0], null, null);
-//        Node<T> temp = hode;
-//        for (int i = 0; i < a.length; i++) {
-//            if (a[i] == null)
-//                continue;
-//
-//            Node<T> newNode = new Node<>(a[i], null, null);
-//
-//            if (antall == 0) {
-//                hode = hale = newNode;
-//            } else {
-//                newNode.forrige = temp;
-//                hale.neste = newNode;
-//                hale = newNode;
-//                temp = newNode;
-//            }
-//            antall++;
-//        }
-
-        // Eksempel med arraylist
-        ArrayList<Integer> index = new ArrayList<>();
+        hode = hale = new Node<>(a[0], null, null);
+        Node<T> temp = hode;
         for (int i = 0; i < a.length; i++) {
-            if (a[i] != null) {
-                index.add(i);
-                antall++;
-            }
-        }
+            if (a[i] == null)
+                continue;
 
+            Node<T> newNode = new Node<>(a[i], null, null);
+
+            if (antall == 0) {
+                hode = hale = newNode;
+            } else {
+                newNode.forrige = temp;
+                hale.neste = newNode;
+                hale = newNode;
+                temp = newNode;
+            }
+            antall++;
+        }
         if (antall == 0) return;
 
-        hode = hale = new Node<>(a[index.get(index.size() - 1)], null, null);
-
-        // Vil saa iterere gjennom og lage et nyte hode for hver gang, som samtidig peker til neste og forrige
-        for (int i = index.size() - 2; i >= 0; i--) {
-            Node<T> tmp = hode;
-            hode = new Node<>(a[index.get(i)], null, tmp);
-            tmp.forrige = hode;
-        }
+        // Eksempel paa konstruktoer ved bruk av arraylist
+//        ArrayList<Integer> index = new ArrayList<>();
+//        for (int i = 0; i < a.length; i++) {
+//            if (a[i] != null) {
+//                index.add(i);
+//                antall++;
+//            }
+//        }
+//
+//        if (antall == 0) return;
+//
+//        hode = hale = new Node<>(a[index.get(index.size() - 1)], null, null);
+//
+//        // Vil saa iterere gjennom og lage et nyte hode for hver gang, som samtidig peker til neste og forrige
+//        for (int i = index.size() - 2; i >= 0; i--) {
+//            Node<T> tmp = hode;
+//            hode = new Node<>(a[index.get(i)], null, tmp);
+//            tmp.forrige = hode;
+//        }
     }
 
     // subliste
