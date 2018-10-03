@@ -76,7 +76,6 @@ public class DobbeltLenketListe<T> implements Liste<T>
         Objects.requireNonNull(a, "Ikkje Lov! -->  Tabellen a er null!");
         if (a.length == 0) return;
 
-        hode = hale = new Node<>(a[0], null, null);
         Node<T> temp = hode;
         for (int i = 0; i < a.length; i++) {
             if (a[i] == null)
@@ -90,11 +89,11 @@ public class DobbeltLenketListe<T> implements Liste<T>
                 newNode.forrige = temp;
                 hale.neste = newNode;
                 hale = newNode;
-                temp = newNode;
             }
+            temp = newNode;
             antall++;
         }
-        if (antall == 0) return;
+        //if (antall == 0) return;
 
         // Eksempel paa konstruktoer ved bruk av arraylist
 //        ArrayList<Integer> index = new ArrayList<>();
@@ -241,8 +240,6 @@ public class DobbeltLenketListe<T> implements Liste<T>
         } else {
             p.forrige.neste = p.neste;
             p.neste.forrige = p.forrige;
-//            q.neste = null;
-//            q.forrige = null;
         }
 
         p.verdi = null;
@@ -279,8 +276,6 @@ public class DobbeltLenketListe<T> implements Liste<T>
             temp = p.verdi;
             p.forrige.neste = p.neste;
             p.neste.forrige = p.forrige;
-            p.neste = null;
-            p.forrige = null;
         }
 
         endringer++;
