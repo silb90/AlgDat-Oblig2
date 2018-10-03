@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
@@ -107,16 +108,59 @@ public class Main {
         /**
          * Oppgave 10
          */
-//        String[] navn10 = {"Lars","Anders","Bodil","Kari","Per","Berit"};
-//        Liste<String> liste11 = new DobbeltLenketListe<>(navn10);
-//        Liste<String> liste12 = new EnkeltLenketListe<>(navn10);
-//        DobbeltLenketListe.sorter(liste11, Comparator.naturalOrder());
-//        DobbeltLenketListe.sorter(liste12, Comparator.naturalOrder());
-//        System.out.println(liste11); // [Anders, Berit, Bodil, Kari, Lars, Per]
-//        System.out.println(liste12); // [Anders, Berit, Bodil, Kari, Lars, Per]
-//        // Tabellen navn er upåvirket:
-//        System.out.println(Arrays.toString(navn10));
-//        // [Lars, Anders, Bodil, Kari, Per, Berit]
+        System.out.println("Oppgave 10\n");
+        String[] navn10 = {"Lars","Anders","Bodil","Kari","Per","Berit"};
+        Liste<String> liste11 = new DobbeltLenketListe<>(navn10);
+        Liste<String> liste12 = new EnkeltLenketListe<>(navn10);
+        DobbeltLenketListe.sorter(liste11, Comparator.naturalOrder());
+        DobbeltLenketListe.sorter(liste12, Comparator.naturalOrder());
+        System.out.println(liste11); // [Anders, Berit, Bodil, Kari, Lars, Per]
+        System.out.println(liste12); // [Anders, Berit, Bodil, Kari, Lars, Per]
+        // Tabellen navn er upåvirket:
+        System.out.println(Arrays.toString(navn10));
+        // [Lars, Anders, Bodil, Kari, Per, Berit]
 
+        // Oppgave 10 tidstest
+        Liste<Integer> nyliste = new DobbeltLenketListe<>();
+        randPerm(nyliste, 4_000);
+        long tid = System.currentTimeMillis();
+        DobbeltLenketListe.sorter(nyliste, Comparator.naturalOrder());
+        System.out.println(System.currentTimeMillis()-tid);
+
+    }
+
+    public static <T> void randPerm(Liste<Integer> liste, int n) {
+        Random r = new Random();         // en randomgenerator
+        for (int i = 0; i < n; i++)
+            liste.leggInn(i+1);                  // legger inn tallene 1, 2, . , n
+
+        for (int k = n - 1; k > 0; k--)  // løkke som går n - 1 ganger
+        {
+            int i = r.nextInt(k + 1);        // en tilfeldig tall fra 0 til k
+
+            int tempA = liste.hent(k);
+            int tempB = liste.hent(i);
+            liste.oppdater(k, tempB);
+            liste.oppdater(i, tempA);
+        }
+    }
+
+    public static int[] randPerm(int n)  // en effektiv versjon
+    {
+        Random r = new Random();         // en randomgenerator
+        int[] a = new int[n];            // en tabell med plass til n tall
+        for (int i = 0; i < n; i++)
+            a[i] = i + 1;                  // legger inn tallene 1, 2, . , n
+
+        for (int k = n - 1; k > 0; k--)  // løkke som går n - 1 ganger
+        {
+            int i = r.nextInt(k + 1);        // en tilfeldig tall fra 0 til k
+
+            int temp = a[k];
+            a[k] = a[i];
+            a[i] = temp;
+        }
+
+        return a;                        // permutasjonen returneres
     }
 }

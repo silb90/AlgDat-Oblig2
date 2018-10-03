@@ -340,9 +340,21 @@ public class DobbeltLenketListe<T> implements Liste<T>
         return joiner.toString();
     }
 
-    public static <T> void sorter(Liste<T> liste, Comparator<? super T> c)
-    {
-        throw new UnsupportedOperationException("Ikke laget ennå!");
+    // Metoden er ikke spesielt effektiv - bruker bobblesortering
+    // Ved testing bruker den rundt 6 ganger lengre tid paa en tilfeldig permutasjon
+    // naar vi dobbler mengden tall
+    // Dvs. at den er gjennomsnittlig av noe imellom kvadratisk og kubisk orden
+    public static <T> void sorter(Liste<T> liste, Comparator<? super T> c) {
+        for (int n = liste.antall(); n > 1; n--) {
+            for (int i = 1; i < n; i++) {
+                T verdiA = liste.hent(i-1);
+                T verdiB = liste.hent(i);
+                if(c.compare(verdiA, verdiB) > 0) {
+                    liste.oppdater(i-1, verdiB);
+                    liste.oppdater(i, verdiA);
+                }
+            }
+        }
     }
 
     @Override
