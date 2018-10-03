@@ -70,9 +70,7 @@ public class DobbeltLenketListe<T> implements Liste<T>
         if (a.length == 0) return;
 
         // Konstruktøren under gir en feil
-        // F.eks. {"Lars", "Birger"}
-        // Hode = Birger, Hale = Lars. Lars.forrige = Birger
-        // Men Birger.neste = Lars.forrige = Birger
+        // Hode.neste, hode.neste.forrige = hode, hode.neste.forrige.neste/forrige = Null
 //        hode = hale = new Node<>(a[0], null, null);
 //        Node<T> temp = hode;
 //        for (int i = 0; i < a.length; i++) {

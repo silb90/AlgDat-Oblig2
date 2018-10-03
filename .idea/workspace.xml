@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="993c8c94-62ca-47aa-80ed-5e6c897e9d5a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgDat-Oblig2/DobbeltLenketListe$DobbeltLenketListeIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgDat-Oblig2/DobbeltLenketListe$DobbeltLenketListeIterator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AlgDat-Oblig2/DobbeltLenketListe$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgDat-Oblig2/DobbeltLenketListe$Node.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AlgDat-Oblig2/DobbeltLenketListe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgDat-Oblig2/DobbeltLenketListe.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgDat-Oblig2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgDat-Oblig2/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DobbeltLenketListe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DobbeltLenketListe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,14 +21,14 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.6691419">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.6955093">
+        <splitter split-orientation="horizontal" split-proportion="0.53143275">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file leaf-file-name="DobbeltLenketListe.java" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/DobbeltLenketListe.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="-6366">
-                      <caret line="103" column="32" lean-forward="true" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="32" />
+                    <state relative-caret-position="-6470">
+                      <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
                       <folding>
                         <element signature="e#3300#3301#0" expanded="true" />
                         <element signature="e#3329#3330#0" expanded="true" />
@@ -49,8 +46,8 @@
               <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/Main.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="429">
-                      <caret line="103" column="36" lean-forward="true" selection-start-line="103" selection-start-column="36" selection-end-line="103" selection-end-column="36" />
+                    <state relative-caret-position="614">
+                      <caret line="100" selection-start-line="100" selection-end-line="100" />
                       <folding>
                         <element signature="imports" expanded="true" />
                       </folding>
@@ -104,8 +101,8 @@
               <file leaf-file-name="DobbeltLenketListe.java" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/DobbeltLenketListe.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="504">
-                      <caret line="259" column="29" selection-start-line="259" selection-start-column="29" selection-end-line="259" selection-end-column="29" />
+                    <state relative-caret-position="306">
+                      <caret line="257" column="29" selection-start-line="257" selection-start-column="29" selection-end-line="257" selection-end-column="29" />
                       <folding>
                         <element signature="e#3300#3301#0" expanded="true" />
                         <element signature="e#3329#3330#0" expanded="true" />
@@ -129,7 +126,7 @@
           <file leaf-file-name="EnkeltLenketListe.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/EnkeltLenketListe.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="6532">
+                <state relative-caret-position="-160">
                   <caret line="331" column="24" selection-start-line="331" selection-start-column="14" selection-end-line="331" selection-end-column="24" />
                 </state>
               </provider>
@@ -166,8 +163,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1321" />
-    <option name="width" value="2126" />
+    <option name="x" value="1385" />
+    <option name="width" value="2062" />
     <option name="height" value="1407" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -222,7 +219,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Oblig2Test">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="DobbeltLenketListe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DobbeltLenketListe" />
       <module name="AlgDat-Oblig2" />
@@ -286,8 +283,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Oblig2Test" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Oblig2Test" />
         <item itemvalue="Application.DobbeltLenketListe" />
       </list>
     </recent_temporary>
@@ -306,7 +303,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="701" y="0" width="2746" height="1407" extended-state="0" />
+    <frame x="1385" y="0" width="2062" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -350,14 +347,15 @@
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
-          <option name="timeStamp" value="50" />
+          <option name="timeStamp" value="51" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="51" />
+      <option name="time" value="52" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="((DobbeltLenketListe)this).hode.neste" custom="DobbeltLenketListe" />
+        <watch expression="liste9" />
       </configuration>
     </watches-manager>
   </component>
@@ -758,6 +756,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Oblig2Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-23671">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Beholder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
@@ -770,25 +775,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="103" column="36" lean-forward="true" selection-start-line="103" selection-start-column="36" selection-end-line="103" selection-end-column="36" />
+        <state relative-caret-position="614">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Oblig2Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-23671">
-          <caret line="116" selection-start-line="116" selection-end-line="116" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DobbeltLenketListe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6366">
-          <caret line="103" column="32" lean-forward="true" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="32" />
+        <state relative-caret-position="-6470">
+          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
           <folding>
             <element signature="e#3300#3301#0" expanded="true" />
             <element signature="e#3329#3330#0" expanded="true" />
