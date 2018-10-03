@@ -217,29 +217,29 @@ public class DobbeltLenketListe<T> implements Liste<T>
     public boolean fjern(T verdi) {
         if (verdi == null) return false;
 
-        Node<T> q = hode;
+        Node<T> p = hode;
 
-        while (q != null) {
-            if (q.verdi.equals(verdi)) break;
-            q = q.neste;
+        while (p != null) {
+            if (p.verdi.equals(verdi)) break;
+            p = p.neste;
         }
 
-        if (q == null) {
+        if (p == null) {
             return false;
-        } else if (q == hode) {
+        } else if (p == hode) {
             hode = hode.neste;
             if (antall > 1) hode.forrige = null;
-        } else if (q == hale) {
+        } else if (p == hale) {
             hale = hale.forrige;
             hale.neste = null;
         } else {
-            q.forrige.neste = q.neste;
-            q.neste.forrige = q.forrige;
-            q.neste = null;
-            q.forrige = null;
+            p.forrige.neste = p.neste;
+            p.neste.forrige = p.forrige;
+//            q.neste = null;
+//            q.forrige = null;
         }
 
-        q.verdi = null;
+        p.verdi = null;
 
         endringer++;
         antall--;
@@ -312,15 +312,13 @@ public class DobbeltLenketListe<T> implements Liste<T>
 
         s.append('[');
 
-        if (!tom())
-        {
+        if (!tom()) {
             Node<T> p = hode;
             s.append(p.verdi);
 
             p = p.neste;
 
-            while (p != null)  // tar med resten hvis det er noe mer
-            {
+            while (p != null) {
                 s.append(',').append(' ').append(p.verdi);
                 p = p.neste;
             }
@@ -406,8 +404,6 @@ public class DobbeltLenketListe<T> implements Liste<T>
 
             fjernOK = false;
 
-            //System.out.println(denne.forrige == hode);
-
             if (antall == 1) {  // Dersom det kun er en Node
                 hale = null;
                 hode.neste = null;
@@ -423,8 +419,6 @@ public class DobbeltLenketListe<T> implements Liste<T>
                 Node<T> temp = denne.forrige.forrige; // denne.forrige skal fjernes
                 temp.neste = denne;
                 denne.forrige = temp;
-                denne.forrige.forrige = null;
-                denne.forrige.neste = null;
             }
 
             endringer++;

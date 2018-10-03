@@ -347,17 +347,13 @@ public class EnkeltLenketListe<T> implements Liste<T>
             fjernOK = false;               // remove() kan ikke kalles på nytt
             Node<T> q = hode;              // hjelpepeker
 
-            if (hode.neste == p)           // skal den første fjernes?
-            {
+            if (hode.neste == p) {
                 hode = hode.neste;           // den første fjernes
                 if (p == null) hale = null;  // dette var den eneste noden
-            }
-            else
-            {
+            } else {
                 Node<T> r = hode;            // må finne forgjengeren
                 // til forgjengeren til p
-                while (r.neste.neste != p)
-                {
+                while (r.neste.neste != p) {
                     r = r.neste;               // flytter r
                 }
 
